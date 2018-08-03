@@ -7,42 +7,32 @@
     tools:context="com.example.isw.isw_2.MainActivity">
 
     <Button
+        android:id="@+id/main2bs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Data"
-        android:id="@+id/Button1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:id="@+id/size"
+        android:theme="@style/MyButton"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Valorar opciones Black-Scholes"/>
+    <Button
+        android:id="@+id/main2mc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="DataSize"
-        android:layout_toLeftOf="@id/Button1"/>
-
-
-    <EditText
-        android:id="@+id/stock_name"
+        android:layout_below="@id/main2bs"
+        android:theme="@style/MyButton"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:text="Valorar opciones Montecarlo"/>
+    <Button
+        android:id="@+id/main2assets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Stock Name"
-        android:layout_toLeftOf="@id/size"/>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/Button1">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Fetched Text Here"
-            android:id="@+id/Data1"
-            />
-
-    </ScrollView>
+        android:layout_below="@id/main2mc"
+        android:theme="@style/MyButton"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:text="Ver listado de acciones"/>
 
 
 </RelativeLayout>

@@ -1,39 +1,45 @@
 package com.example.isw.isw_2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatEditText;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    Button click;
-    public static TextView data;
-    private static AppCompatEditText mDisplayName;
-    private static AppCompatEditText mDisplayDataSize;
-    public static String StockName;
-    public static String DataSize;
+    Button b1;
+    Button b2;
+    Button b3;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        click = (Button) findViewById(R.id.Button1);
-        data = (TextView) findViewById(R.id.Data1);
+        b1 = (Button) findViewById(R.id.main2bs);
+        b2 = (Button) findViewById(R.id.main2assets);
+        b3 = (Button) findViewById(R.id.main2mc);
 
-        mDisplayName = (AppCompatEditText) findViewById(R.id.stock_name);
-        mDisplayDataSize = (AppCompatEditText) findViewById(R.id.size);
-        click.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fetchData process = new fetchData();
-                process.execute();
-                StockName = MainActivity.mDisplayName.getText().toString();
-                DataSize = MainActivity.mDisplayDataSize.getText().toString();
+                startActivity(new Intent(MainActivity.this, BlackScholes.class));
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, listofAssets.class));
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Montecarlo.class));
             }
         });
     }

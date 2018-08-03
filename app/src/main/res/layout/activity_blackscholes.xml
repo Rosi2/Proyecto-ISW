@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.isw.isw_2.BlackScholes">
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleP"/>
+    <EditText
+        android:id="@+id/Asset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Asset"
+        android:inputType="phone"
+        android:layout_below="@id/toggleP"/>
+    <EditText
+        android:id="@+id/Stake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Strike"
+        android:inputType="phone"
+        android:layout_below="@id/Asset"/>
+    <EditText
+        android:id="@+id/Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Time"
+        android:inputType="phone"
+        android:layout_below="@id/Stake"/>
+
+    <EditText
+        android:id="@+id/r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Risk free rate"
+        android:inputType="phone"
+        android:layout_below="@id/Time"/>
+
+    <EditText
+        android:id="@+id/o"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Volatility"
+        android:inputType="phone"
+        android:layout_below="@id/r"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:id="@+id/Button2"
+        android:layout_below="@id/r"
+        android:layout_toRightOf="@id/o"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DataBS"
+        android:layout_below="@id/o"/>
+
+
+
+</RelativeLayout>

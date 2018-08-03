@@ -28,7 +28,7 @@ public class fetchData extends AsyncTask<Void,Void,Void> {
     protected Void doInBackground(Void... voids) {
         try {
 
-            URL url = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+ MainActivity.StockName + "&outputsize="+ MainActivity.DataSize +"&apikey=8QV3FD6AP6MIDLX5");
+            URL url = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+ listofAssets.StockName + "&outputsize="+ listofAssets.DataSize +"&apikey=8QV3FD6AP6MIDLX5");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             InputStream inputStream = httpURLConnection.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
@@ -66,6 +66,6 @@ public class fetchData extends AsyncTask<Void,Void,Void> {
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
 
-        MainActivity.data.setText(this.TimeSeriesQuery);
+        listofAssets.data.setText(this.TimeSeriesQuery);
     }
 }
